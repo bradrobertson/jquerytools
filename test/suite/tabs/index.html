@@ -4,17 +4,20 @@
   <title>Tabs Test</title>
   <link rel="stylesheet" type="text/css" href="../lib/stylesheets/jasmine.css">
   <link rel="stylesheet" type="text/css" href="css/tabs.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script type="text/javascript" src="../lib/javascripts/jasmine.js"></script>
-  <script type="text/javascript" src="../lib/javascripts/jasmine-html.js"></script>
+  <script type="text/javascript" src="../../js/jquery-1.6.2.js"></script>
+  <script type="text/javascript" src="../lib/javascripts/jasmine/lib/jasmine-core/jasmine.js"></script>
+  <script type="text/javascript" src="../lib/javascripts/jasmine/lib/jasmine-core/jasmine-html.js"></script>
+  <script type="text/javascript" src="../lib/javascripts/jasmine-jquery/lib/jasmine-jquery.js"></script>
   <script type="text/javascript" src="../support/SpecHelper.js"></script>
-  
+
   <script type="text/javascript" src="../../../src/toolbox/toolbox.expose.js"></script>
   <script type="text/javascript" src="../../../src/tabs/tabs.js"></script>
   <script type="text/javascript" src="TabsSpec.js"></script>
-  
+
   <script type="text/javascript">
     $(function(){
+      jasmine.getFixtures().fixturesPath = 'fixtures';
+
       // Start Jasmine Tests
       jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
       jasmine.getEnv().execute();
@@ -38,7 +41,7 @@
     	<div>pane 3 content</div>
     </div>
   </div>
-  
+
   <h1>Wizard</h1>
   <div id="wizard">
   	<!-- tabs -->
